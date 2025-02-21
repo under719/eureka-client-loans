@@ -1,0 +1,30 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: team5-client-loan
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    register-with-eureka: true
+    fetch-register: true
+    registry-fetch-interval-seconds: 5
+    service-url:
+      # defaultZone: http://localhost:8296/eureka
+      defaultZone: http://team5-eureka-server:8296/eureka
+
