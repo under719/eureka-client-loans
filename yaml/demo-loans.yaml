@@ -5,7 +5,7 @@ metadata:
   name: team5-eureka-client-loan
   namespace: under76-test
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: team5-eureka-client-loan
